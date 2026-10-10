@@ -19,7 +19,11 @@ struct LCDView: View {
             background
             if !model.isAsleep {
                 VStack(spacing: 0) {
-                    TitleBar(model: model, u: u)
+                    TitleBar(
+                        title: model.title(for: model.page.screen),
+                        isPlaying: model.player.current == nil ? nil : model.player.isPlaying,
+                        u: u
+                    )
                     ZStack {
                         content(for: model.page)
                             .id(model.stack.count)
@@ -73,18 +77,20 @@ private func timeString(_ seconds: TimeInterval) -> String {
 // MARK: - Title bar
 
 private struct TitleBar: View {
-    let model: IPodModel
+    let title: String
+    /// nil when nothing is loaded, so no play/pause icon is shown.
+    let isPlaying: Bool?
     let u: CGFloat
 
     var body: some View {
         ZStack {
-            Text(model.title(for: model.page.screen))
+            Text(title)
                 .font(lcdFont(11, u))
                 .lineLimit(1)
                 .padding(.horizontal, 20 * u)
             HStack {
-                if model.player.current != nil {
-                    Image(systemName: model.player.isPlaying ? "play.fill" : "pause.fill")
+                if let isPlaying {
+                    Image(systemName: isPlaying ? "play.fill" : "pause.fill")
                         .font(.system(size: 7 * u, weight: .black))
                 }
                 Spacer()
