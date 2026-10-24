@@ -36,6 +36,14 @@ A pixel‑faithful recreation of the **2001 first‑generation iPod**, built ent
 
 ▶️ <https://youtube.com/shorts/OArLHTPaQVM>
 
+## 🥚 Easter Egg
+
+The Apple Music website once had an iPod easter egg too.
+
+<p align="center">
+  <img src="docs/apple-music-easter-egg.png" width="720" alt="iPod easter egg on the Apple Music website">
+</p>
+
 ## 🎨 Look
 
 - 🤍 White acrylic front with a polished stainless‑steel rim, using the original 102 × 62 mm proportions
@@ -111,6 +119,14 @@ Drop any other `.mp3` into the `ipod/` folder and it shows up automatically.
 [![在 YouTube 觀看展示影片](https://img.youtube.com/vi/OArLHTPaQVM/hqdefault.jpg)](https://youtube.com/shorts/OArLHTPaQVM)
 
 ▶️ <https://youtube.com/shorts/OArLHTPaQVM>
+
+## 🥚 彩蛋
+
+Apple Music 的網頁也出現過 iPod 的彩蛋
+
+<p align="center">
+  <img src="docs/apple-music-easter-egg.png" width="720" alt="Apple Music 網頁上的 iPod 彩蛋">
+</p>
 
 ## 🎨 外觀
 
